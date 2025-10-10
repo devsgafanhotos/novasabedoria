@@ -7,8 +7,16 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
     // TODO: implementar lógica de autenticação
+    const email = event.target.email.value;
+    const senha = event.target.senha.value;
 
-    console.log("Login enviado!");
+    if (!email || !senha) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+    console.log("Email:", email);
+    console.log("Senha:", senha);
+    // lógica para autenticar o usuário
   };
 
   return (
@@ -20,13 +28,11 @@ export default function Login() {
       <form onSubmit={handleSubmit} className={styles.LoginForm}>
         <legend>Conecte-se</legend>
 
-        <input type="email" placeholder="Email" name="email" required />
+        <input type="email" placeholder="Email" name="email" />
 
-        <input type="password" placeholder="Senha" name="senha" required />
+        <input type="password" placeholder="Senha" name="senha" />
 
-        <button type="submit" onClick={handleSubmit}>
-          Entrar
-        </button>
+        <button type="submit">Entrar</button>
 
         <Link to="/recuperar-senha">Esqueceste-te da palavra-passe?</Link>
       </form>
