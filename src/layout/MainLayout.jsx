@@ -1,8 +1,18 @@
-import Sidebar from "../components/Sidebar";
-import Topbar from "../components/Topbar";
+import Sidebar from "../partials/Sidebar";
+import Topbar from "../partials/Topbar";
+import styles from "./MainLayout.module.css";
 
-export default function MainLayout() {
+export default function MainLayout({ children }) {
   return (
-    <h1>main Layout</h1>
+    <div className={styles.layout}>
+      {/* Menu lateral fixo */}
+      <Sidebar />
+
+      {/* Área principal, praticamente é aqui onde o conteudo é centralizado  */}
+      <div className={styles["layout-content"]}>
+        <Topbar />
+        <main className={styles["layout-main"]}>{children}</main>
+      </div>
+    </div>
   );
 }

@@ -1,0 +1,38 @@
+/* === Topbar === */
+.topbar {
+  background: white;
+  height:3.4rem;
+  padding: 10px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:var(--box-shadow);
+  margin-top: 10px;
+}
+
+
+
+.topbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: larger;
+  
+}
+.topbar-icons > span {
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(89, 86, 86);
+}
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: contain;
+}

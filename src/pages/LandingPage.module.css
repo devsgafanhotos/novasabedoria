@@ -1,6 +1,6 @@
 .LandingPage {
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: var(--bg1);
 }
 
 .LandingPage h1 {
@@ -16,7 +16,7 @@
 .LandingPage a {
   margin-top: 20px;
   font-size: 1.2rem;
-  color: #007bff;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -24,39 +24,30 @@
   text-decoration: underline;
 }
 
-
 .MainContent {
   max-width: 100%;
   margin: 0 auto;
- 
   text-align: center;
 }
 
-.MainContent section  .Illustration {
-
-
- 
-
+.MainContent section .Illustration {
 }
 
-.MainContent  .imagesSection{
+.MainContent .imagesSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
+}
 
-  img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-  } 
+.MainContent .imagesSection img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
 }
 
 .HeroSection {
- 
- 
-
   width: 100%;
   height: 300px;
   margin-top: 50px;
@@ -67,33 +58,28 @@
   align-items: center;
   text-align: center;
   padding: 20px;
-  box-sizing: border-box;
-
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
+}
+.HeroSection h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-
-.CardContainer{
+.CardContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
-
-.AboutSection{
+.AboutSection {
   margin: 50px 0;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--bg-default);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   text-align: center;
-  
 
   h2 {
     font-size: 2rem;
@@ -110,17 +96,15 @@
     border: none;
     border-top: 1px solid #eee;
   }
-
 }
 
-.ContactSection{
+.ContactSection {
   margin: 50px 0;
   padding: 20px;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   text-align: center;
-  
 
   h2 {
     font-size: 2rem;
@@ -149,6 +133,5 @@
     margin: 10px 0;
     font-size: 1.2rem;
     color: #666;
-  } 
-
+  }
 }

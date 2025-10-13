@@ -1,0 +1,31 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f7f9fc;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Sidebar === */
+.layout > aside {
+  width: 230px;
+  flex-shrink: 0;
+}
+
+/* === Conteúdo principal === */
+.layout-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/* === Topbar === */
+.layout-content > header {
+  flex-shrink: 0;
+}
+
+/* === Área de conteúdo dinâmico === */
+.layout-main {
+  flex: 1;
+  margin-top: 15px;
+}

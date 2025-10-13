@@ -1,8 +1,10 @@
 import MainLayout from "../layout/MainLayout";
-export default function Professores() {
+import Alunos from "./Alunos";
+
+export default function Home() {
   return (
     <MainLayout>
-      <h1>Professores</h1>
+    
     </MainLayout>
   );
 }

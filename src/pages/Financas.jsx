@@ -1,5 +1,9 @@
+import MainLayout from "../layout/MainLayout";
+
 export default function Financas() {
   return (
-    <h1>Financas</h1>
+    <MainLayout>
+      <h1>Financas</h1>
+    </MainLayout>
   );
 }

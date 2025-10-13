@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 import styles from "./Login.module.css";
+import Button from "../components/Button";
 
 export default function Login() {
   const handleSubmit = (event) => {
@@ -32,8 +33,7 @@ export default function Login() {
 
         <input type="password" placeholder="Senha" name="senha" />
 
-        <button type="submit">Entrar</button>
-
+          <Button content={"Entrar"} className={styles.btn}/>
         <Link to="/recuperar-senha">Esqueceste-te da palavra-passe?</Link>
       </form>
     </div>

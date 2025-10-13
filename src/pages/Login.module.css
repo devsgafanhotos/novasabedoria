@@ -1,95 +1,123 @@
 /* ======================================================
-    Login.module.css
-   Responsabilidade: Estilos específicos da página de login.
-    ====================================================== */
+   Arquivo: Login.module.css
+   Responsabilidade: Definir os estilos específicos da página de Login.
+   O design é focado em simplicidade, centralização e clareza visual.
+   ====================================================== */
 
-/*  Container principal centralizado na tela */
+/* ==============================
+   CONTAINER PRINCIPAL
+   ============================== */
+
+/* Define o contêiner principal centralizado na tela. 
+   Usa Flexbox para centralizar o conteúdo vertical e horizontalmente. */
 .Container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh; /* ocupa a tela toda */
-  overflow-x: hidden;
+  display: flex;                /* Ativa o modelo flexível */
+  flex-wrap: wrap;              /* Permite quebra de linha caso o conteúdo ultrapasse o limite */
+  flex-direction: column;       /* Organiza os elementos em coluna */
+  align-items: center;          /* Centraliza horizontalmente os itens */
+  justify-content: center;      /* Centraliza verticalmente os itens */
+  min-height: 100vh;            /* Ocupa toda a altura da tela */
+  overflow-x: hidden;           /* Remove rolagem horizontal */
 }
 
-/*  Formulário principal */
+/* ==============================
+   FORMULÁRIO DE LOGIN
+   ============================== */
+
+/* Estilo principal do formulário de login */
 .LoginForm {
-  background-color: #ffffff;
-  border-radius: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  padding-bottom: 2.2rem;
-  gap: 2rem;
-  width: 18.8rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background-color: var(--bg-default);  /* Cor de fundo principal, definida nas variáveis globais */
+  border-radius: 24px;                  /* Cantos arredondados para suavizar o design */
+  display: flex;                        /* Usa Flexbox para organizar internamente */
+  flex-direction: column;               /* Organiza o conteúdo em coluna (vertical) */
+  align-items: center;                  /* Centraliza os itens horizontalmente */
+  padding: 1rem;                        /* Espaçamento interno padrão */
+  padding-bottom: 2.2rem;               /* Espaçamento extra na parte inferior */
+  gap: 2rem;                            /* Espaço entre os elementos do formulário */
+  width: 18.8rem;                       /* Largura fixa e compacta do card de login */
+  box-shadow: var(--box-shadow);        /* Sombra definida nas variáveis globais */
 }
 
-/* Título */
+/* ==============================
+   TÍTULO DO FORMULÁRIO
+   ============================== */
+
+/* O <legend> (título do formulário) é destacado com tipografia maior e cor escura */
 .LoginForm legend {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1a1a1a;
+  font-size: 1.5rem;       /* Tamanho de fonte relativamente grande */
+  font-weight: 600;        /* Peso da fonte médio-forte */
+  color: #1a1a1a;          /* Cor do texto escura para contraste */
 }
 
-/*  Campos de entrada */
+/* ==============================
+   CAMPOS DE ENTRADA
+   ============================== */
+
+/* Define estilo padrão para todos os <input> do formulário */
 .LoginForm input {
-  padding: 10px 12px;
-  border: 1px solid #d9d9d9;
-  border-radius: 8px;
-  background-color: #f0f2f5;
-  width: 93%;
-  outline: none;
-  color: #333;
-  transition: border-color 0.2s ease;
+  padding: 10px 12px;                /* Espaçamento interno para conforto visual */
+  border: 1px solid #d9d9d9;         /* Borda cinza clara */
+  border-radius: 8px;                /* Borda arredondada */
+  background-color: var(--bg1);      /* Cor de fundo secundária */
+  width: 93%;                        /* Largura relativa ao formulário */
+  outline: none;                     /* Remove o contorno padrão do navegador */
+  color: #333;                       /* Cor do texto dos inputs */
+  transition: border-color 0.2s ease;/* Transição suave ao mudar a cor da borda */
 }
 
+/* Efeito de foco nos campos */
 .LoginForm input:focus {
-  border-color: #3876f2;
+  border-color: var(--primary-color); /* Borda assume a cor principal ao focar */
 }
 
-/*  Logo */
+/* ==============================
+   LOGO DA APLICAÇÃO
+   ============================== */
+
+/* Define o tamanho e posicionamento do logotipo exibido acima do formulário */
 .Logo {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 1rem;
-  object-fit: contain;
+  width: 120px;             /* Largura fixa da imagem */
+  height: 120px;            /* Altura fixa da imagem */
+  margin-bottom: 1rem;      /* Espaço entre o logo e o formulário */
+  object-fit: contain;      /* Mantém a proporção da imagem sem cortar */
 }
 
-/*  Botão principal */
-.LoginForm button {
-  margin-top: 10px;
-  color: #fff;
-  background-color: #3876f2;
-  padding: 10px;
-  width: 93%;
-  border: 1px solid #fff;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: larger;
-  transition: background-color 0.3s ease;
-}
+/* ==============================
+   LINKS AUXILIARES
+   ============================== */
 
-.LoginForm button:hover {
-  background-color: #0f3869;
-}
-
-/* Link auxiliar */
+/* Exemplo: "Esqueceu a senha?" */
 .LoginForm a {
-  color: #3876f2;
-  text-decoration: none;
-  font-size: 0.8rem;
+  color: var(--primary-color);  /* Usa a cor principal do tema */
+  text-decoration: none;        /* Remove sublinhado padrão */
+  font-size: 0.8rem;            /* Texto pequeno */
 }
 
+/* Adiciona sublinhado no hover para indicar interatividade */
 .LoginForm a:hover {
   text-decoration: underline;
 }
 
+/* ==============================
+   BOTÃO DE LOGIN
+   ============================== */
+
+/* Estilo do botão ativo */
+.btn {
+  background-color: var(--primary-color); /* Cor principal do tema */
+  width: 93%;                             /* Mesma largura dos inputs */
+  outline: none;                          /* Remove contorno ao clicar */
+  border: 1px solid var(--primary-color); /* Borda com a mesma cor do fundo */
+  border-radius: 8px;                     /* Cantos arredondados */
+  padding: 8px;                           /* Espaçamento interno */
+  font-size: large;                       /* Texto grande */
+  color: #d9d9d9;                         /* Cor clara do texto */
+  font-weight: bolder;                    /* Texto em negrito */
+  cursor: pointer;                        /* Mostra o cursor de clique */
+}
+
+/* Estado desativado do botão (por exemplo, ao validar o formulário) */
 .btn_disabled {
-  background-color: #a0c1f7 !important;
-  cursor: not-allowed;
+  background-color: var(--secondary-color) !important; /* Cor cinza ou neutra */
+  cursor: not-allowed;                                  /* Cursor bloqueado */
 }

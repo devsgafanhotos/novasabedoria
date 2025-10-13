@@ -1,0 +1,21 @@
+.barraBusca {
+  position: relative;
+  justify-self: center;
+  color: var(--primary-color);
+}
+
+
+.search-input {
+  border:1px solid var(--secondary-color);
+  background:var(--secondary-color);
+  padding: 8px 40px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  font-size: larger;
+}

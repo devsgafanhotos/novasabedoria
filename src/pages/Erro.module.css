@@ -1,0 +1,60 @@
+/* ======================================================
+   Arquivo: Erro.module.css
+   Responsabilidade: Estilos da página de erro (404 ou genérica)
+   Descrição: Exibe uma ilustração centralizada com fundo responsivo.
+   ====================================================== */
+
+/* ==============================
+   CONTAINER PRINCIPAL
+   ============================== */
+
+/* O contêiner ocupa toda a área visível da janela e exibe 
+   uma imagem centralizada representando o erro. */
+.container {
+  margin-bottom: 30px; /* Espaço inferior (caso o conteúdo abaixo exista) */
+  width: 100vw; /* Ocupa toda a largura da janela de visualização */
+  height: 100vh; /* Ocupa toda a altura da janela de visualização */
+
+  /* ------------------------------
+     FUNDO COM ILUSTRAÇÃO SVG
+     ------------------------------ */
+  background-image: url(../../public/images/undraw_page-not-found_6wni.svg);
+  /* Caminho relativo da imagem exibida no fundo. 
+     Idealmente deve estar dentro da pasta 'public/images/'. */
+
+  background-position: center center; /* Centraliza a imagem no meio da tela */
+  background-repeat: no-repeat; /* Evita repetição do SVG */
+  background-size: cover;
+  background-attachment: scroll;
+
+  /* ------------------------------
+     ALINHAMENTO DE CONTEÚDO
+     ------------------------------ */
+  display: flex;
+   /* Ativa o modelo Flexbox */
+   flex-direction: column;
+  justify-content: flex-start; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+}
+
+.container h1 {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.container p {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.container a {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+

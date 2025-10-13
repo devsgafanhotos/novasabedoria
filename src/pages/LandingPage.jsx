@@ -1,5 +1,5 @@
 import style from "./LandingPage.module.css";
-import Header from "../components/Header";
+import Header from "../partials/Header";
 import logo2 from "../assets/td.jpg";
 import aluno1 from "../assets/alunos.jpg";
 
@@ -7,7 +7,6 @@ import c from "../assets/c.jpg";
 
 
 import professor1 from "../assets/profesores.jpeg";
-import professor2 from "../assets/profesores2.jpeg";
 import Card from "../components/Card";
 
 export default function LandingPage() {
